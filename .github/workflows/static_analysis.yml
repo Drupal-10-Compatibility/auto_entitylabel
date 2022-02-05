@@ -19,6 +19,7 @@ jobs:
       SIMPLETEST_BASE_URL: http://localhost:8888
       PROJECT_ROOT: .
       DRUPAL_ROOT: ./docroot
+      PHP_VERSION: '8.1'
     steps:
       - uses: actions/checkout@v2
       - uses: nanasess/setup-chromedriver@master
@@ -35,10 +36,10 @@ jobs:
           mysql version: '5.7'
           mysql database: ${{ env.MODULE }}
           mysql root password: root
-      - name: Set up php version (8.0)
+      - name: Set up php version ${{ env.PHP_VERSION }}
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.1'
+          php-version: ${{ env.PHP_VERSION }}
           extensions: date, dom, filter, gd, hash, json, mbstring, pcre, pdo, session, tokenizer, xml
           # Includes code coveage for phpunit, but disables xDebug
           coverage: pcov

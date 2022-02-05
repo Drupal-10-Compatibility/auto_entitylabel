@@ -1,9 +1,9 @@
 {
-    "name": "80-20-components/<project_name>",
-    "description": "80/20 Components:  <Project Name>",
+    "name": "Drupal-10-Compatibility/autosave_form",
+    "description": "80/20 Components:  Autosave Form",
     "type": "project",
     "license": "GPL-2.0-or-later",
-    "homepage": "https://www.drupal.org/project/<project_name>",
+    "homepage": "https://www.drupal.org/project/autosave_form",
     "repositories": [
         {
             "type": "composer",

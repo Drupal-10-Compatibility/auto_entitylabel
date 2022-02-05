@@ -19,6 +19,7 @@ jobs:
       SIMPLETEST_BASE_URL: http://localhost:8888
       PROJECT_ROOT: .
       DRUPAL_ROOT: ./docroot
+      PHP_VERSION: '8.1'
       MINK_DRIVER_ARGS: '["chrome", {"chromeOptions":{"args":["--disable-gpu", "--headless”]}}, "http://localhost:9515/wd/hub"]'
       MINK_DRIVER_ARGS_WEBDRIVER: '["chrome", { "chromeOptions": { "w3c": false } }, "http://localhost:9515/wd/hub"]'
     steps:
@@ -37,10 +38,10 @@ jobs:
           mysql version: '5.7'
           mysql database: ${{ env.MODULE }}
           mysql root password: root
-      - name: Set up php version (8.1)
+      - name: Set up php version ${{ env.PHP_VERSION }}
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.1'
+          php-version: ${{ env.PHP_VERSION }}
           extensions: date, dom, filter, gd, hash, json, mbstring, pcre, pdo, session, tokenizer, xml
           # Includes code coveage for phpunit, but disables xDebug
           coverage: pcov

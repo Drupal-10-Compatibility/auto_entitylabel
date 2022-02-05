@@ -15,6 +15,7 @@ This template can be used to quickly scaffold a Drupal project (module, theme, p
 1.  Edit the ./github/workflows/coding_standards.yml file, and replace all occurrences of `<project_name>` with the machine name of the project (there are two occurrences by default in this file), and save.
 1.  Edit the ./github/workflows/static_analysis.yml file, and replace all occurrences of `<project_name>` with the machine name of the project (there are two occurrences by default in this file), and save.
 1.  Edit the ./github/workflows/unit_tests.yml file, and replace all occurrences of `<project_name>` with the machine name of the project (there are two occurrences by default in this file), and save.
+1.  Edit the composer.json file, and replace all occurrences of `<project_name>` with the machine name of the project (there are two occurrences by default in this file), and save.
 1.  At the command line, execute `composer require drupal/<project_name>:#.x-dev`, replacing `<project_name>` with the machine name of the project, and replacing `#` with the main version number of the project you intend to remediate for coding standards compliance.
 1.  Edit the README.md file, replacing `<Insert Project Name here>` with the human readable name of the Drupal project, and replace all occurrences of `<project_name>` with the machine name of the project.
 1.  Remove all contents of the README.md file down to the comment below these instructions, and save the README.md file
@@ -40,6 +41,6 @@ The purpose of this project is to leverage Github Actions to build a Drupal 10 s
 
 | Analysis Type | Results | Test Run |
 | ----- | ----- | ----- |
-| Static Analysis: | ![Static Analysis](https://github.com/80-20-Components/<project_name>/actions/workflows/static_analysis.yml/badge.svg) | [Static Analysis](https://github.com/80-20-Components/<project_name>/actions/workflows/static_analysis.yml) |
-| Coding Standards: | ![Coding Standards](https://github.com/80-20-Components/<project_name>/actions/workflows/coding_standards.yml/badge.svg) | [Coding Standards](https://github.com/80-20-Components/<project_name>/actions/workflows/coding_standards.yml) |
-| Unit Tests: | ![Unit Tests](https://github.com/80-20-Components/<project_name>/actions/workflows/unit_tests.yml/badge.svg) | [Unit Tests](https://github.com/80-20-Components/<project_name>/actions/workflows/unit_tests.yml) |
+| Static Analysis: | ![Static Analysis](https://github.com/Drupal-10-Compatibility/<project_name>/actions/workflows/static_analysis.yml/badge.svg) | [Static Analysis](https://github.com/Drupal-10-Compatibility/<project_name>/actions/workflows/static_analysis.yml) |
+| Coding Standards: | ![Coding Standards](https://github.com/Drupal-10-Compatibility/<project_name>/actions/workflows/coding_standards.yml/badge.svg) | [Coding Standards](https://github.com/Drupal-10-Compatibility/<project_name>/actions/workflows/coding_standards.yml) |
+| Unit Tests: | ![Unit Tests](https://github.com/Drupal-10-Compatibility/<project_name>/actions/workflows/unit_tests.yml/badge.svg) | [Unit Tests](https://github.com/Drupal-10-Compatibility/<project_name>/actions/workflows/unit_tests.yml) |
