@@ -53,6 +53,7 @@
     },
     "extra": {
         "enable-patching": true,
+        "composer-exit-on-patch-failure": true,
         "drupal-scaffold": {
             "file-mapping": {
                 "[web-root]/robots.txt": false,
