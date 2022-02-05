@@ -1,0 +1,120 @@
+{
+    "name": "80-20-components/<project_name>",
+    "description": "80/20 Components:  <Project Name>",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/<project_name>",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.7",
+        "drupal/core": "10.0.x-dev as 9.4",
+        "drupal/core-composer-scaffold": "10.0.x-dev as 9.4",
+        "drupal/core-recommended": "10.0.x-dev as 9.4",
+        "drush/drush": "^11.0",
+        "oomphinc/composer-installers-extender": "^2.0",
+        "wikimedia/composer-merge-plugin": "^2.0"
+    },
+    "require-dev": {
+        "drupal/core-dev": "10.0.x-dev as 9.4",
+        "drupal/upgrade_status": "3.x-dev#dcc24b8",
+        "phpspec/prophecy-phpunit": "^2",
+        "phpstan/phpstan-deprecation-rules": "^1.0"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "platform": {
+            "php": "8.1 as 7.0"
+        },
+        "allow-plugins": {
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "composer/installers": true,
+            "wikimedia/composer-merge-plugin": true,
+            "oomphinc/composer-installers-extender": true,
+            "phpstan/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "extra": {
+        "enable-patching": true,
+        "drupal-scaffold": {
+            "file-mapping": {
+                "[web-root]/robots.txt": false,
+                "[web-root]/.ht.router.php": false,
+                "[web-root]/example.gitignore": false,
+                "[web-root]/.htaccess": false,
+                "[web-root]/INSTALL.txt": false,
+                "[web-root]/LICENSE.txt": false,
+                "[web-root]/README.txt": false,
+                "[web-root]/web.config": false
+            },
+            "initial": {
+                "sites/default/default.services.yml": "docroot/sites/default/default.services.yml",
+                "sites/default/default.settings.php": "docroot/sites/default/default.settings.php",
+                "robots.txt": "docroot/robots.txt",
+                ".htaccess": "docroot/.htaccess"
+            },
+            "omit-defaults": true,
+            "locations": {
+                "web-root": "docroot/"
+            }
+        },
+        "installer-types": [
+            "component",
+            "bower-asset",
+            "npm-asset"
+        ],
+        "installer-paths": {
+            "docroot/core": [
+                "type:drupal-core"
+            ],
+            "docroot/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "docroot/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "docroot/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "docroot/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "docroot/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library",
+                "type:npm-asset",
+                "type:bower-asset"
+            ]
+        },
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "patches": {}
+    },
+    "scripts": {
+        "post-install-cmd": [],
+        "post-update-cmd": []
+    }
+}
