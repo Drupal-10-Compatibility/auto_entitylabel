@@ -1,0 +1,6 @@
+#!/bin/bash
+## Description: Check for Drupal coding-standards violations using phpcs (run `ddev install` first)
+## Usage: coding-standards
+## Example: "ddev coding-standards"
+
+/var/www/html/vendor/bin/phpcs -p docroot/modules/contrib/$PROJECT_NAME
