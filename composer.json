@@ -3,7 +3,7 @@
     "description": "Drupal 10 Compatibility:  <human readable project name>",
     "type": "project",
     "license": "GPL-2.0-or-later",
-    "homepage": "https://www.drupal.org/project/<projet_name>",
+    "homepage": "https://www.drupal.org/project/<project_name>",
     "repositories": [
         {
             "type": "composer",
