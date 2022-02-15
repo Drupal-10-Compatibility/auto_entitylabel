@@ -12,14 +12,25 @@ This template can be used to quickly scaffold a Drupal project (module, theme, p
 
 ## After creating your project and cloning your repository locally...
 
-1.  Edit the ./github/workflows/coding_standards.yml file, and replace all occurrences of `<project_name>` with the machine name of the project (there are two occurrences by default in this file), and save.
-1.  Edit the ./github/workflows/static_analysis.yml file, and replace all occurrences of `<project_name>` with the machine name of the project (there are two occurrences by default in this file), and save.
-1.  Edit the ./github/workflows/unit_tests.yml file, and replace all occurrences of `<project_name>` with the machine name of the project (there are two occurrences by default in this file), and save.
+### README.md
+1.  Edit the `README.md` file, replacing `<Insert Project Name here>` with the human readable name of the Drupal project, and replace all occurrences of `<project_name>` with the machine name of the project.
+1.  Remove all contents of the `README.md` file down to the comment below these instructions, and save the `README.md` file
+
+### DDEV config file
+1.  Edit the `.ddev/config.yaml` file, and replace all occurrences of `<project_name>` with the machine name of the project (there is one occurrence in this file), replacing any `_` in the machine name with a `-` to create a valid project name for DDEV, and save.
+
+### Github Actions
+1.  Edit the `./github/workflows/coding_standards.yml` file, and replace all occurrences of `<project_name>` with the machine name of the project (there are two occurrences by default in this file), and save.
+1.  Edit the `./github/workflows/static_analysis.yml` file, and replace all occurrences of `<project_name>` with the machine name of the project (there are two occurrences by default in this file), and save.
+1.  Edit the `./github/workflows/unit_tests.yml` file, and replace all occurrences of `<project_name>` with the machine name of the project (there are two occurrences by default in this file), and save.
+
+### composer.json
 1.  Edit the composer.json file, and replace all occurrences of `<project_name>` with the machine name of the project (there are two occurrences by default in this file), and save.
+1.  Replace `<human readable project name>` with the name of the project from Drupal.org, and save the `composer.json` file.
 1.  At the command line, execute `composer require drupal/<project_name>:#.x-dev`, replacing `<project_name>` with the machine name of the project, and replacing `#` with the main version number of the project you intend to remediate for coding standards compliance.
-1.  Edit the README.md file, replacing `<Insert Project Name here>` with the human readable name of the Drupal project, and replace all occurrences of `<project_name>` with the machine name of the project.
-1.  Remove all contents of the README.md file down to the comment below these instructions, and save the README.md file
-1.  Commit all changes to the files in the project to the repository.
+
+### Wrap up
+1.  Commit all changes to the files in the project to the repository, and push up your changes.
 1.  You're all set and ready to go.  Github actions will run coding standards checks, static analysis for deprecations, and execute any unit tests that the project has in it's codebase.
 1.  Work on code remediation in the form of patches until all Github Actions jobs execute successfully.
 1.  Submit your patches to the project on Drupal.org!

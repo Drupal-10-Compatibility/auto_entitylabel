@@ -3,4 +3,4 @@
 composer.lock
 /docroot
 /vendor
-/.ddev
+/.ddev/*.example
