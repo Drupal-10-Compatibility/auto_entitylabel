@@ -1,0 +1,6 @@
+#!/bin/bash
+## Description: Run a static analysis on the project with phpstan (run `ddev install` first)
+## Usage: static-analyze
+## Example: "ddev static-analyze"
+
+/var/www/html/vendor/bin/phpstan analyze --memory-limit 1G docroot/modules/contrib/$PROJECT_NAME

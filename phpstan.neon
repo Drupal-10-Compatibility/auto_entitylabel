@@ -1,0 +1,5 @@
+parameters:
+  customRulesetUsed: true
+  reportUnmatchedIgnoredErrors: false
+  ## Suppresses the error reporting on twig functions
+  treatPhpDocTypesAsCertain: false

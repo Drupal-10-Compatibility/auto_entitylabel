@@ -1,0 +1,15 @@
+#!/bin/bash
+## Description: Run installation sequences in the web container: composer install, drush site:install
+## Usage: install
+## Example: "ddev install"
+
+echo "Installing composer dependencies (with development dependencies)."
+composer install --no-interaction --no-progress --apcu-autoloader || exit 1;
+echo "Composer packages are installed"
+
+echo "Running site installation."
+drush -y si standard || exit 1;
+drush -y en $PROJECT_NAME || exit 1;
+echo "Site installation is finished"
+
+drush uli
