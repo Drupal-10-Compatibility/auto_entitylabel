@@ -21,6 +21,7 @@
         "drupal/core-composer-scaffold": "9.5.x-dev",
         "drupal/core-recommended": "9.5.x-dev",
         "drupal/project_name": "^1.0.0",
+        "drupal/upgrade_status": "^3.14",
         "drush/drush": "^11.0",
         "oomphinc/composer-installers-extender": "^2.0",
         "wikimedia/composer-merge-plugin": "^2.0"
