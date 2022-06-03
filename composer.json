@@ -1,9 +1,9 @@
 {
-    "name": "drupal-10-compatibility/project_name",
-    "description": "Drupal 10 Compatibility:  project_label",
+    "name": "drupal-10-compatibility/auto_entitylabel",
+    "description": "Drupal 10 Compatibility:  Automatic Entity Label",
     "type": "project",
     "license": "GPL-2.0-or-later",
-    "homepage": "https://www.drupal.org/project/project_name",
+    "homepage": "https://www.drupal.org/project/auto_entitylabel",
     "repositories": [
         {
             "type": "composer",
@@ -20,7 +20,7 @@
         "drupal/core": "9.5.x-dev",
         "drupal/core-composer-scaffold": "9.5.x-dev",
         "drupal/core-recommended": "9.5.x-dev",
-        "drupal/project_name": "^1.0.0",
+        "drupal/auto_entitylabel": "^3.x-dev",
         "drupal/upgrade_status": "^3.14",
         "drush/drush": "^11.0",
         "oomphinc/composer-installers-extender": "^2.0",

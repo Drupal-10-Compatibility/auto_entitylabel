@@ -1,4 +1,4 @@
-name: ddev_project_name
+name: auto-entitylabel
 type: drupal9
 docroot: docroot
 php_version: "8.1"
@@ -15,7 +15,7 @@ mutagen_enabled: false
 use_dns_when_possible: true
 composer_version: "2"
 web_environment:
-  - PROJECT_NAME=project_name
+  - PROJECT_NAME=auto_entitylabel
 
 # Key features of ddev's config.yaml:
 
