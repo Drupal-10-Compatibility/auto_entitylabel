@@ -64,7 +64,7 @@ jobs:
         run: |
           echo ${{ env.SIMPLETEST_DB }}
           $(pwd)/vendor/bin/drush site-install standard --yes --account-pass=admin --db-url=$SIMPLETEST_DB
-          $(pwd)/vendor/bin/drush en ${{env.MODULE}} --yes
+          $(pwd)/vendor/bin/drush en token ${{env.MODULE}} --yes
           $(pwd)/vendor/bin/drush config-set system.performance css.preprocess 0 --yes
           $(pwd)/vendor/bin/drush config-set system.performance js.preprocess 0 --yes
           $(pwd)/vendor/bin/drush config-set system.logging error_level all --yes
