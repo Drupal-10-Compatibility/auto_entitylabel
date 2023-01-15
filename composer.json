@@ -114,9 +114,6 @@
             "drupal/core": "-p2"
         },
         "patches": {
-            "drupal/auto_entitylabel": {
-                "Issue #3286135: Drupal 10 Compatibility fixes": "https://git.drupalcode.org/project/auto_entitylabel/-/merge_requests/7.patch"
-            }
         }
     },
     "scripts": {
